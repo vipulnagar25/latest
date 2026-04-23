@@ -80,7 +80,7 @@ public class LinkedList<E> {
     if (index == size - 1) {
       return removeAtLast();
     }
-    int count = 0;
+    /*int count = 0; by using two pointer approach
     Node currentNode = head;
     Node previousNode = head;
     while (nonNull(currentNode) && (count != index)) {
@@ -89,6 +89,17 @@ public class LinkedList<E> {
       count++;
     }
     previousNode.next = currentNode.next;
+    size--;
+    return true;*/
+    Node current = head;
+
+    // Move to (index - 1) node
+    for (int i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+
+    // Remove node at index
+    current.next = current.next.next;
     size--;
     return true;
   }
@@ -115,10 +126,10 @@ public class LinkedList<E> {
     //        linkedList.removeAtFirst();
     //        System.out.println(linkedList.size);
     //        System.out.println(linkedList);
-    linkedList.removeAtLast();
+    // linkedList.removeAtLast();
     //        System.out.println(linkedList.size);
     //        System.out.println(linkedList);
-    // linkedList.removeAt(4);
+    linkedList.removeAt(3);
     System.out.println(linkedList.size);
     System.out.println(linkedList);
   }
