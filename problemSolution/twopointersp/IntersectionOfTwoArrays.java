@@ -1,7 +1,9 @@
 package problemSolution.twopointersp;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class IntersectionOfTwoArrays {
@@ -9,6 +11,25 @@ public class IntersectionOfTwoArrays {
         int[] nums1 = {1,2,2,1};
         int[] nums2 = {2,2};
         System.out.println(Arrays.toString(intersection(nums1, nums2)));
+    }
+    // for sorted array
+
+    public static List<Integer> intersectionb(int[] a, int[] b) {
+        int i = 0, j = 0;
+        List<Integer> result = new ArrayList<>();
+
+        while (i < a.length && j < b.length) {
+            if (a[i] == b[j]) {
+                result.add(a[i]);
+                i++;
+                j++;
+            } else if (a[i] < b[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+        return result;
     }
     public static int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();

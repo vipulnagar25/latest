@@ -18,7 +18,7 @@ public class ReverseOnlyLetters {
 
     /*      Input: s = "a-bC-dEf-ghIj"
     Output: "j-Ih-gfE-dCba"
-    Example 3:
+    Example c3:
 
     Input: s = "Test1ng-Leet=code-Q!"
     Output: "Qedo1ct-eeLg=ntse-T!"*/
