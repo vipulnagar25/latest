@@ -14,7 +14,7 @@ public class IntersectionOfTwoArrays {
     }
     // for sorted array
 
-    public static List<Integer> intersectionb(int[] a, int[] b) {
+    public static List<Integer> intersectionForSortedArray(int[] a, int[] b) {
         int i = 0, j = 0;
         List<Integer> result = new ArrayList<>();
 
